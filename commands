@@ -1,0 +1,59 @@
+Prerequisites
+Install Docker
+Install Minikube:
+
+Minikube Installation Guide
+Install kubectl:
+
+kubectl Installation Guide
+Install Helm:
+
+Helm Installation Guide
+Install Python and dependencies:
+
+Python 3.6+ is required.
+
+Install the kubernetes Python library:
+bash
+Copy code
+pip install kubernetes
+
+
+Steps to Run the Script
+Save the Script: Save the script to a file, e.g., minikube_keda_script.py.
+
+Ensure Minikube is Installed: Verify Minikube is installed and operational:
+
+bash
+Copy code
+minikube version
+Start Minikube: Ensure Minikube is running:
+
+bash
+Copy code
+minikube start
+Run the Script: Execute the script using Python:
+
+bash
+Copy code
+python minikube_keda_script.py
+Verify Resources in Minikube: After the script runs, check the resources created:
+
+Verify deployments:
+bash
+Copy code
+kubectl get deployments
+Verify services:
+bash
+Copy code
+kubectl get services
+Verify KEDA installation:
+bash
+Copy code
+kubectl get pods -n keda
+Access the Application: If a service was created, expose it using Minikube's IP:
+
+bash
+Copy code
+minikube service example-deployment-service
+This command opens the service in your default web browser.
